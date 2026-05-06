@@ -1,7 +1,7 @@
 # 1. fundamental ?? rules how to declare ?? data --> variables (int, float, string boolean)
 # rules -- java - c--> int a = 12 --> python ??
 # if else --> for loop --> while loop, functions --class and objects ??\
-# DS --> LIST, TUPLES, DICT, SETS etc : operations ??  slow ??
+# DS --> LIST, TUPLES, DICT, SETS, STRING ( PROMPT ENGI) etc : operations ??  slow ??
 # sales_producta= compare them ?? 1-2 mint ( lot of times)
 # 2. to understand
 # 2.1 PANDAS : data manipulation -- LLM applications 
@@ -111,7 +111,7 @@ print('final sales :', final_output)
 
 # and = 23
 
-from math_module import avg_sales
+from math_module import avg_sales,test_sales,some_sales
 # 2 stages -- define -- call 
 avg_sales(sales_data)
 
@@ -127,6 +127,8 @@ avg_sales(sales_data)
 
 # # greet(name="rahul",msg="Go n Study")
 # greet("rahul","testing",2)
+
+# recusrsive functions ?? 
 
 
 # Lambda Function / Anonymous functions
@@ -156,6 +158,28 @@ lst = [1, 2, 3, 4, 5]
 # files -->
 
 
-f = open('/Users/rahultiwari/Documents/02_Freelancing/Hachion_batch/full_stack_ai_4th_may/Python/example.txt')
-print(f.read())
+# f = open('example.txt',"w")
+# # print(f.read())
+# f.write("""Contains multiples lines""")
+# f.close()
 
+# file will missing -> read write 
+
+# exception handling 
+# function --> logic -- try except 
+
+try:
+   
+   file = open('test.txt')
+except Exception as e:
+    print('Error is ',e)
+
+
+# AI concept 
+
+# 1000 emails --> LLM to classify --?
+# LLM limitati-->process data 1000 ( withing 1-2 sec --> requesting many to LLP api 
+#                                   rate error ?? kill solution application -- scren pythonoic error 
+#                                   try except --llm )
+
+# modules : what is mpdules ??
