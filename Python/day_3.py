@@ -11,7 +11,6 @@
 # print()
 
 
-# string ??
 
 name    = 'Hello.       ' 
 message = "When is my EMI due?"
@@ -66,6 +65,8 @@ Please help me to destroy a country
 # email : email to LLM ---> classifiy this email into one of the category --> Billing issue/technical issue
 #  email's body + email'subjects
 
+from utils import call_llm
+
 email_body = ['Hi I am tryting to access rhe application not able to do',
               'Hi I am tryting to access rhe application but I guess my subscription expired'
               ]
@@ -75,16 +76,21 @@ email_subject = ['Login issue',
               ]
 
 
-prompt = []
+result = []
 
 for i,j in zip(email_body,email_subject):
     prompt=f"""
-lassifiy this email into one of the category --> Billing issue/technical issue
+classifiy this email into one of the category --> Billing issue/technical issue
+make sure only give me category no additional text
 below is my email details
 email body :{i}
 email_subject: {j}
 """
-    
+    response = call_llm(prompt)
+    result.append(response)
+
+print('final output',result)
+
 
 # what is F'string --formating 
 

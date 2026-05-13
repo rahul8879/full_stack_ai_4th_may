@@ -9,5 +9,21 @@ def validation(prompt):
         
     return flag
 
+
+from dotenv import load_dotenv
+print(load_dotenv())
+
+from openai import OpenAI
+
+client = OpenAI()
+
+# string ??
+
 def call_llm(prompt):
-    return " Happy to help you "
+    response = client.chat.completions.create(
+        model='gpt-4o-mini',
+        messages=[{"role": "user", "content": prompt}]
+    )
+
+    return response.choices[0].message.content.strip()
+
